@@ -1,0 +1,14 @@
+﻿@model IEnumerable<EmployeesRegister.Models.Database.Employee>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-2">
+        <h2>Employees</h2>
+    </div>
+</div>
+@Html.Partial("SearchPartial", new EmployeesRegister.Models.SearchFilter())
+<div class="row" id="employees">
+    @Html.Partial("EmployeesPartial", Model)
+</div>
